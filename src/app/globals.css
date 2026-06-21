@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 160 20% 98%;
+    --foreground: 168 30% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 168 30% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 168 30% 12%;
+    --primary: 162 45% 38%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 38 45% 92%;
+    --secondary-foreground: 38 50% 25%;
+    --muted: 160 15% 94%;
+    --muted-foreground: 168 10% 45%;
+    --accent: 38 55% 55%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 160 15% 88%;
+    --input: 160 15% 88%;
+    --ring: 162 45% 38%;
+    --radius: 0.75rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  ::selection {
+    @apply bg-hope-200 text-hope-950;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-primary;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-4 py-20 md:px-8 md:py-28 lg:px-12 lg:py-32;
+  }
+
+  .container-narrow {
+    @apply mx-auto max-w-6xl px-4 md:px-8;
+  }
+
+  .container-wide {
+    @apply mx-auto max-w-7xl px-4 md:px-8;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-hope-600 via-hope-500 to-gold-500 bg-clip-text text-transparent;
+  }
+
+  .glass-card {
+    @apply rounded-2xl border border-white/20 bg-white/70 backdrop-blur-xl shadow-lg;
+  }
+
+  .premium-gradient {
+    background: linear-gradient(
+      135deg,
+      hsl(160 20% 98%) 0%,
+      hsl(162 30% 95%) 50%,
+      hsl(38 45% 96%) 100%
+    );
+  }
+
+  .hero-gradient {
+    background: radial-gradient(
+        ellipse 80% 60% at 50% 0%,
+        hsl(162 45% 38% / 0.12),
+        transparent
+      ),
+      radial-gradient(
+        ellipse 60% 50% at 80% 50%,
+        hsl(38 55% 55% / 0.08),
+        transparent
+      ),
+      hsl(160 20% 98%);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .animate-delay-100 {
+    animation-delay: 100ms;
+  }
+
+  .animate-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animate-delay-300 {
+    animation-delay: 300ms;
+  }
+
+  .animate-delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .animate-delay-500 {
+    animation-delay: 500ms;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
