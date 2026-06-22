@@ -47,18 +47,18 @@ export function Header() {
       >
         <Link
           href="/"
-          className="group flex items-center gap-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg"
-          aria-label={`${SITE.shortName} - Home`}
+          className="group flex min-w-0 flex-1 items-center gap-2 sm:gap-3 mr-2 lg:mr-0 lg:flex-initial focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg"
+          aria-label={`${SITE.name} - Home`}
         >
-          <div className="relative flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-hope-500 to-hope-700 shadow-md transition-transform group-hover:scale-105">
-            <span className="font-display text-lg font-bold text-white">B</span>
+          <div className="relative flex h-9 w-9 shrink-0 sm:h-10 sm:w-10 items-center justify-center rounded-full bg-gradient-to-br from-hope-500 to-hope-700 shadow-md transition-transform group-hover:scale-105">
+            <span className="font-display text-base sm:text-lg font-bold text-white">B</span>
             <div className="absolute inset-0 rounded-full bg-gold-400/20 blur-sm" />
           </div>
-          <div className="hidden sm:block">
-            <span className="font-display text-xl font-semibold text-hope-800">
+          <div className="min-w-0 flex-1 lg:flex-initial">
+            <span className="font-display text-sm sm:text-xl font-semibold text-hope-800 block truncate leading-tight">
               Bright Hope
             </span>
-            <span className="block text-[10px] uppercase tracking-widest text-muted-foreground">
+            <span className="block text-[9px] sm:text-[10px] uppercase tracking-wider sm:tracking-widest text-muted-foreground truncate leading-tight max-[359px]:hidden">
               Counselling & Coaching
             </span>
           </div>
@@ -107,7 +107,7 @@ export function Header() {
 
         <button
           type="button"
-          className="lg:hidden p-2 rounded-lg hover:bg-muted transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+          className="lg:hidden shrink-0 p-2 rounded-lg hover:bg-muted transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
           onClick={() => setIsOpen(!isOpen)}
           aria-expanded={isOpen}
           aria-controls="mobile-menu"

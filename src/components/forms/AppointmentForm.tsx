@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import { useForm, Controller } from "react-hook-form";
+import { useEffect, useState } from "react";
+import { useForm, Controller, useWatch } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Loader2, CheckCircle2, AlertCircle, Copy, Check } from "lucide-react";
 import {
@@ -9,6 +9,7 @@ import {
   type AppointmentFormData,
 } from "@/lib/validations/schemas";
 import { SERVICE_OPTIONS } from "@/lib/constants";
+import { SLOT_TAKEN_MESSAGE } from "@/lib/appointments";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -28,6 +29,8 @@ export function AppointmentForm() {
   const [errorMessage, setErrorMessage] = useState("");
   const [bookingId, setBookingId] = useState("");
   const [copied, setCopied] = useState(false);
+  const [slotTaken, setSlotTaken] = useState(false);
+  const [checkingSlot, setCheckingSlot] = useState(false);
 
   const {
     register,
@@ -43,12 +46,66 @@ export function AppointmentForm() {
   });
 
   const minDate = new Date().toISOString().split("T")[0];
+  const watchedDate = useWatch({ control, name: "date" });
+  const watchedTime = useWatch({ control, name: "time" });
+
+  useEffect(() => {
+    if (!watchedDate || !watchedTime) {
+      setSlotTaken(false);
+      return;
+    }
+
+    const controller = new AbortController();
+    const timeoutId = window.setTimeout(async () => {
+      setCheckingSlot(true);
+      try {
+        const params = new URLSearchParams({
+          date: watchedDate,
+          time: watchedTime,
+        });
+        const response = await fetch(`/api/check-appointment-slot?${params}`, {
+          signal: controller.signal,
+        });
+        const result = await response.json();
+        if (response.ok) {
+          setSlotTaken(result.available === false);
+        }
+      } catch (err) {
+        if (err instanceof Error && err.name !== "AbortError") {
+          setSlotTaken(false);
+        }
+      } finally {
+        if (!controller.signal.aborted) {
+          setCheckingSlot(false);
+        }
+      }
+    }, 400);
+
+    return () => {
+      controller.abort();
+      window.clearTimeout(timeoutId);
+    };
+  }, [watchedDate, watchedTime]);
 
   async function onSubmit(data: AppointmentFormData) {
     setFormState("loading");
     setErrorMessage("");
 
     try {
+      const params = new URLSearchParams({ date: data.date, time: data.time });
+      const availabilityResponse = await fetch(
+        `/api/check-appointment-slot?${params}`
+      );
+      const availabilityResult = await availabilityResponse.json();
+
+      if (
+        availabilityResponse.ok &&
+        availabilityResult.available === false
+      ) {
+        setSlotTaken(true);
+        throw new Error(SLOT_TAKEN_MESSAGE);
+      }
+
       const response = await fetch("/api/book-appointment", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -63,6 +120,7 @@ export function AppointmentForm() {
 
       setBookingId(result.bookingId);
       setFormState("success");
+      setSlotTaken(false);
       reset();
     } catch (err) {
       setFormState("error");
@@ -229,7 +287,7 @@ export function AppointmentForm() {
             id="date"
             type="date"
             min={minDate}
-            aria-invalid={!!errors.date}
+            aria-invalid={!!errors.date || slotTaken}
             {...register("date")}
           />
           {errors.date && (
@@ -246,12 +304,20 @@ export function AppointmentForm() {
             type="time"
             min="09:00"
             max="18:00"
-            aria-invalid={!!errors.time}
+            aria-invalid={!!errors.time || slotTaken}
             {...register("time")}
           />
           {errors.time && (
             <p className="text-sm text-destructive" role="alert">
               {errors.time.message}
+            </p>
+          )}
+          {checkingSlot && watchedDate && watchedTime && (
+            <p className="text-sm text-muted-foreground">Checking availability...</p>
+          )}
+          {slotTaken && !errors.date && !errors.time && (
+            <p className="text-sm text-destructive" role="alert">
+              {SLOT_TAKEN_MESSAGE}
             </p>
           )}
         </div>
@@ -286,7 +352,7 @@ export function AppointmentForm() {
         variant="gold"
         size="lg"
         className="w-full sm:w-auto"
-        disabled={formState === "loading"}
+        disabled={formState === "loading" || slotTaken || checkingSlot}
       >
         {formState === "loading" ? (
           <>

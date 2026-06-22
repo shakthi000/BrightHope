@@ -128,7 +128,7 @@ export async function sendContactConfirmation(data: {
       We have received your message and appreciate you reaching out to Bright Hope Counselling & Coaching Centre.
     </p>
     <p style="color:#374151;font-size:15px;line-height:1.7;margin:0 0 16px;">
-      Our team will review your inquiry and get back to you within 24–48 hours. If your matter is urgent, please call us at <strong>${SITE.phoneFormatted}</strong>.
+      Our team will review your enquiry and get back to you. If your matter is urgent, please call us at <strong>${SITE.phoneFormatted}</strong>.
     </p>
     <p style="color:#6b7280;font-size:14px;line-height:1.6;margin:0;">
       With warmth and hope,<br>

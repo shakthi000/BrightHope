@@ -8,6 +8,11 @@ import {
 import { rateLimit, getClientIp } from "@/lib/rate-limit";
 import { generateBookingId } from "@/lib/utils";
 import { ALL_SERVICES } from "@/lib/constants";
+import {
+  isAppointmentSlotAvailable,
+  isUniqueSlotViolation,
+  SLOT_TAKEN_MESSAGE,
+} from "@/lib/appointments";
 
 export async function POST(request: Request) {
   try {
@@ -42,6 +47,12 @@ export async function POST(request: Request) {
       ALL_SERVICES.find((s) => s.id === service)?.title || service;
 
     const supabase = createServerSupabase();
+
+    const slotAvailable = await isAppointmentSlotAvailable(supabase, date, time);
+    if (!slotAvailable) {
+      return NextResponse.json({ error: SLOT_TAKEN_MESSAGE }, { status: 409 });
+    }
+
     const { error: dbError } = await supabase.from("appointments").insert({
       booking_id: bookingId,
       name,
@@ -56,6 +67,9 @@ export async function POST(request: Request) {
 
     if (dbError) {
       console.error("Database error:", dbError);
+      if (isUniqueSlotViolation(dbError)) {
+        return NextResponse.json({ error: SLOT_TAKEN_MESSAGE }, { status: 409 });
+      }
       return NextResponse.json(
         { error: "Failed to save your appointment. Please try again." },
         { status: 500 }

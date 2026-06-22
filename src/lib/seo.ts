@@ -88,7 +88,34 @@ export function localBusinessSchema() {
         closes: "18:00",
       },
     ],
-    sameAs: [],
+    sameAs: [SITE.social.youtube],
+  };
+}
+
+function founderCredential(name: string) {
+  return {
+    "@type": "EducationalOccupationalCredential",
+    name,
+  };
+}
+
+export function founderPersonSchema() {
+  const credentials = [
+    ...SITE.founder.qualifications.map((qualification) =>
+      founderCredential(qualification)
+    ),
+    founderCredential("Content Creator (YouTube – Let's Xplore)"),
+  ];
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": `${SITE.url}/#founder`,
+    name: SITE.founder.name,
+    jobTitle: SITE.founder.title,
+    url: `${SITE.url}/about`,
+    sameAs: [SITE.founder.youtube.url],
+    hasCredential: credentials,
   };
 }
 
@@ -103,6 +130,13 @@ export function counsellingServiceSchema() {
       "@type": "Person",
       name: SITE.founder.name,
       jobTitle: SITE.founder.title,
+      sameAs: [SITE.founder.youtube.url],
+      hasCredential: [
+        ...SITE.founder.qualifications.map((qualification) =>
+          founderCredential(qualification)
+        ),
+        founderCredential("Content Creator (YouTube – Let's Xplore)"),
+      ],
     },
     areaServed: {
       "@type": "City",
@@ -112,7 +146,7 @@ export function counsellingServiceSchema() {
       "Individual Counselling",
       "Relationship Counselling",
       "Cancer Support Counselling",
-      "Group Counselling",
+      "Group Counselling (For Institutions & Corporate Organisations)",
       "Academic Coaching",
       "Student Counselling",
     ],

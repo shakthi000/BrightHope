@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Quote } from "lucide-react";
+import { Quote, Youtube } from "lucide-react";
 import { SITE } from "@/lib/constants";
 import {
   AnimatedSection,
@@ -61,6 +61,37 @@ export function FounderSection() {
                 development, she combines psychological insight with educational
                 expertise.
               </p>
+            </div>
+
+            <div className="mt-8">
+              <h4 className="text-sm font-semibold uppercase tracking-wider text-hope-700 mb-3">
+                Qualifications
+              </h4>
+              <ul className="space-y-2" role="list">
+                {SITE.founder.qualifications.map((qualification) => (
+                  <li
+                    key={qualification}
+                    className="flex items-start gap-2 text-sm text-muted-foreground"
+                  >
+                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-hope-500" aria-hidden="true" />
+                    <span>{qualification}</span>
+                  </li>
+                ))}
+                <li className="flex items-start gap-2 text-sm">
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-hope-500" aria-hidden="true" />
+                  <a
+                    href={SITE.founder.youtube.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-hope-700 hover:text-hope-900 transition-colors font-medium"
+                  >
+                    <Youtube className="h-4 w-4 shrink-0" aria-hidden="true" />
+                    <span>
+                      Content Creator | {SITE.founder.youtube.channel}
+                    </span>
+                  </a>
+                </li>
+              </ul>
             </div>
 
             <blockquote className="mt-8 relative rounded-2xl border border-hope-200 bg-white/60 p-6 backdrop-blur-sm">

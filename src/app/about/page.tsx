@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { Quote, Award, Heart, BookOpen } from "lucide-react";
+import { Quote, Award, Heart, BookOpen, Youtube } from "lucide-react";
 import { SITE } from "@/lib/constants";
-import { createMetadata, breadcrumbSchema } from "@/lib/seo";
+import { createMetadata, breadcrumbSchema, founderPersonSchema } from "@/lib/seo";
 import {
   AnimatedSection,
   SectionHeading,
@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button";
 export const metadata: Metadata = createMetadata({
   title: "About Us",
   description:
-    "Learn about A Lakshmi, founder of Bright Hope Counselling & Coaching Centre — a cancer survivor, psychological counsellor, and mentor dedicated to transforming lives.",
+    "Learn about A Lakshmi, founder of Bright Hope Counselling & Coaching Centre — M.Sc. (Psychology), psychological counsellor, content creator (YouTube – Let's Xplore), and mentor dedicated to transforming lives.",
   path: "/about",
 });
 
@@ -21,12 +21,17 @@ export default function AboutPage() {
     { name: "Home", url: SITE.url },
     { name: "About", url: `${SITE.url}/about` },
   ]);
+  const founderSchema = founderPersonSchema();
 
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(founderSchema) }}
       />
 
       <section className="pt-32 pb-16 hero-gradient">
@@ -149,6 +154,37 @@ export default function AboutPage() {
                   development, she combines psychological insight with educational
                   expertise to deliver holistic support.
                 </p>
+              </div>
+
+              <div className="mt-8">
+                <h3 className="text-sm font-semibold uppercase tracking-wider text-hope-700 mb-3">
+                  Qualifications
+                </h3>
+                <ul className="space-y-2" role="list">
+                  {SITE.founder.qualifications.map((qualification) => (
+                    <li
+                      key={qualification}
+                      className="flex items-start gap-2 text-sm text-muted-foreground"
+                    >
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-hope-500" aria-hidden="true" />
+                      <span>{qualification}</span>
+                    </li>
+                  ))}
+                  <li className="flex items-start gap-2 text-sm">
+                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-hope-500" aria-hidden="true" />
+                    <a
+                      href={SITE.founder.youtube.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-hope-700 hover:text-hope-900 transition-colors font-medium"
+                    >
+                      <Youtube className="h-4 w-4 shrink-0" aria-hidden="true" />
+                      <span>
+                        Content Creator | {SITE.founder.youtube.channel}
+                      </span>
+                    </a>
+                  </li>
+                </ul>
               </div>
 
               <blockquote className="mt-8 rounded-2xl border border-hope-200 bg-white/60 p-6">

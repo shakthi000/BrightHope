@@ -20,9 +20,21 @@ export const SITE = {
     title: "Psychological Counsellor, Academician & Mentor",
     quote:
       "My purpose is to make a meaningful difference in people's lives by helping them heal, grow, and discover the best version of themselves.",
+    qualifications: [
+      "M.Sc. (Psychology)",
+      "M.Sc. (Plant Science)",
+      "B.Ed.",
+      "PG Diploma in Guidance and Counselling",
+      "Diploma in School, Corporate and Family Counselling",
+      "CTET Qualified",
+    ],
+    youtube: {
+      channel: "Let's Xplore",
+      url: "https://www.youtube.com/@letsxplore77",
+    },
   },
   social: {
-    // Add when available
+    youtube: "https://www.youtube.com/@letsxplore77",
   },
 } as const;
 
@@ -60,7 +72,7 @@ export const SERVICES = {
     },
     {
       id: "group",
-      title: "Group Counselling",
+      title: "Group Counselling (For Institutions & Corporate Organisations)",
       description:
         "Connect with others on similar journeys in facilitated group sessions that foster shared healing and growth.",
       icon: "Users",
@@ -194,7 +206,7 @@ export const FAQ_ITEMS = [
   {
     question: "What types of issues do you help with?",
     answer:
-      "We support a wide range of concerns including anxiety, depression, relationship issues, academic stress, cancer-related emotional support, grief, self-esteem, and personal growth.",
+      "We support a wide range of concerns including emotional wellbeing, self-discovery, personal growth, relationship concerns, family concerns, academic challenges, career guidance, life transitions, stress management, confidence building, and cancer support counselling.",
   },
   {
     question: "How long is each session?",

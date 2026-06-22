@@ -67,8 +67,8 @@ export function ContactForm() {
           Message Sent Successfully
         </h3>
         <p className="mt-2 text-muted-foreground">
-          Thank you for reaching out. We will get back to you within 24–48 hours.
-          A confirmation email has been sent to your inbox.
+          Thank you for reaching out. Our team will review your enquiry and get back
+          to you. A confirmation email has been sent to your inbox.
         </p>
         <Button
           variant="outline"
