@@ -4,7 +4,7 @@ export const SITE = {
   description:
     "Professional counselling, mentoring and academic guidance in Chennai. Transform your life with compassionate support from A Lakshmi.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://brighthope.in",
-  email: "lakshmiananthanssv@gmail.com",
+  email: "shakthiakshata@gmail.com",
   phone: "9962261841",
   phoneFormatted: "+91 99622 61841",
   address: {
