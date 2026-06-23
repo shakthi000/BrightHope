@@ -13,7 +13,7 @@ import {
 export const metadata: Metadata = createMetadata({
   title: "Blog",
   description:
-    "Insights on emotional wellness, academic success, parenting, and personal growth from Bright Hope Counselling & Coaching Centre.",
+    "Insights on emotional wellness, academic success, parenting and personal growth from Bright Hope Counselling & Coaching Centre.",
   path: "/blog",
 });
 
@@ -39,7 +39,7 @@ export default function BlogPage() {
             Wisdom for Your Journey
           </h1>
           <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Articles on emotional wellness, academic success, and personal growth
+            Articles on emotional wellness, academic success and personal growth
             to support your transformation.
           </p>
         </div>

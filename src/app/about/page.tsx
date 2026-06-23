@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button";
 export const metadata: Metadata = createMetadata({
   title: "About Us",
   description:
-    "Learn about A Lakshmi, founder of Bright Hope Counselling & Coaching Centre — M.Sc. (Psychology), psychological counsellor, content creator (YouTube – Let's Xplore), and mentor dedicated to transforming lives.",
+    "Learn about A Lakshmi, founder of Bright Hope Counselling & Coaching Centre — M.Sc. (Psychology), psychological counsellor, content creator (YouTube – Let's Xplore) and mentor dedicated to transforming lives.",
   path: "/about",
 });
 
@@ -43,7 +43,7 @@ export default function AboutPage() {
             A Mission Rooted in Hope & Resilience
           </h1>
           <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Transforming lives through professional counselling, mentoring, and
+            Transforming lives through professional counselling, mentoring and
             education by nurturing emotional well-being and personal empowerment.
           </p>
         </div>
@@ -59,9 +59,9 @@ export default function AboutPage() {
                 align="left"
               />
               <p className="text-muted-foreground leading-relaxed mb-6">
-                To transform lives through professional counselling, mentoring, and
+                To transform lives through professional counselling, mentoring and
                 education by nurturing emotional well-being, resilience,
-                self-discovery, academic success, and personal empowerment.
+                self-discovery, academic success and personal empowerment.
               </p>
               <SectionHeading
                 eyebrow="Our Vision"
@@ -70,8 +70,8 @@ export default function AboutPage() {
               />
               <p className="text-muted-foreground leading-relaxed">
                 To create a world where individuals and students are equipped with
-                the emotional strength, knowledge, confidence, and life skills needed
-                to achieve excellence, lead purposeful lives, and positively impact
+                the emotional strength, knowledge, confidence and life skills needed
+                to achieve excellence, lead purposeful lives and positively impact
                 their communities.
               </p>
             </div>
@@ -113,7 +113,7 @@ export default function AboutPage() {
                 </h2>
                 <p className="mt-2 text-muted-foreground">{SITE.founder.title}</p>
                 <div className="mt-4 flex flex-wrap justify-center gap-2">
-                  {["Cancer Survivor", "Counsellor", "Mentor", "Academician"].map(
+                  {["Counsellor", "Mentor", "Academician"].map(
                     (tag) => (
                       <span
                         key={tag}
@@ -141,13 +141,13 @@ export default function AboutPage() {
                 </p>
                 <p>
                   She is known for building trust and rapport effortlessly while
-                  creating a safe, compassionate, and non-judgmental environment.
+                  creating a safe, compassionate and non-judgmental environment.
                 </p>
                 <p>
                   As a cancer survivor, she transformed her own journey of resilience
-                  into a mission of helping others heal, grow, and find hope. She has
+                  into a mission of helping others heal, grow and find hope. She has
                   successfully supported cancer combatants, students, professionals,
-                  homemakers, and individuals from diverse backgrounds.
+                  homemakers and individuals from diverse backgrounds.
                 </p>
                 <p>
                   With more than 10 years of experience in education and student

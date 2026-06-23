@@ -28,21 +28,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 const blogContent: Record<string, string[]> = {
   "finding-hope-after-adversity": [
-    "Life's greatest challenges often become the catalyst for our most profound transformations. Whether facing illness, loss, or overwhelming change, the path from struggle to hope is one that countless individuals walk every day — and it is a path you do not have to walk alone.",
-    "Resilience is not about denying pain or pretending everything is fine. It is about acknowledging your feelings, seeking support, and taking small, intentional steps toward healing. Research consistently shows that individuals who engage in counselling during difficult periods report higher levels of emotional clarity and life satisfaction.",
-    "At Bright Hope, we believe that every person carries an innate capacity for growth and renewal. Our role is to help you uncover that strength, provide practical tools for coping, and create a safe space where healing can unfold naturally.",
+    "Life's greatest challenges often become the catalyst for our most profound transformations. Whether facing illness, loss or overwhelming change, the path from struggle to hope is one that countless individuals walk every day — and it is a path you do not have to walk alone.",
+    "Resilience is not about denying pain or pretending everything is fine. It is about acknowledging your feelings, seeking support and taking small, intentional steps toward healing. Research consistently shows that individuals who engage in counselling during difficult periods report higher levels of emotional clarity and life satisfaction.",
+    "At Bright Hope, we believe that every person carries an innate capacity for growth and renewal. Our role is to help you uncover that strength, provide practical tools for coping and create a safe space where healing can unfold naturally.",
     "If you are navigating a difficult season, remember: reaching out is not a sign of weakness — it is an act of courage. Your journey toward hope begins with a single step.",
   ],
   "supporting-your-child-emotionally": [
     "Children experience emotions just as intensely as adults, but they often lack the vocabulary and tools to express what they feel. As parents, recognizing the signs of emotional distress early can make a significant difference in your child's well-being.",
-    "Common signs include changes in sleep patterns, withdrawal from activities they once enjoyed, increased irritability, declining academic performance, or physical complaints without medical cause. These signals are your child's way of communicating that something needs attention.",
+    "Common signs include changes in sleep patterns, withdrawal from activities they once enjoyed, increased irritability, declining academic performance or physical complaints without medical cause. These signals are your child's way of communicating that something needs attention.",
     "Creating a nurturing home environment starts with active listening. When your child shares their feelings, resist the urge to immediately fix or minimize their experience. Instead, validate their emotions and let them know it is okay to feel what they feel.",
     "Professional student counselling can provide additional support when home strategies alone are not enough. At Bright Hope, we work collaboratively with parents to ensure children receive the holistic support they need to thrive emotionally and academically.",
   ],
   "managing-academic-stress": [
-    "Academic pressure is one of the most common sources of stress among students today. The constant push for grades, competition, and future uncertainty can take a significant toll on mental health and overall well-being.",
+    "Academic pressure is one of the most common sources of stress among students today. The constant push for grades, competition and future uncertainty can take a significant toll on mental health and overall well-being.",
     "The first step in managing academic stress is recognizing that your worth is not defined by your grades. While academic achievement is important, it should never come at the cost of your mental health.",
-    "Practical strategies include breaking large tasks into manageable chunks, using the Pomodoro technique for focused study sessions, maintaining a consistent sleep schedule, and scheduling regular breaks for physical activity and social connection.",
+    "Practical strategies include breaking large tasks into manageable chunks, using the Pomodoro technique for focused study sessions, maintaining a consistent sleep schedule and scheduling regular breaks for physical activity and social connection.",
     "Mindfulness and breathing exercises can also help manage anxiety during exams and deadlines. Even five minutes of deep breathing before a test can significantly reduce stress hormones and improve focus.",
     "If academic stress feels overwhelming, seeking professional support through academic coaching or student counselling can provide personalized strategies and emotional support tailored to your unique situation.",
   ],

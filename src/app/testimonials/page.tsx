@@ -14,7 +14,7 @@ import { Button } from "@/components/ui/button";
 export const metadata: Metadata = createMetadata({
   title: "Testimonials",
   description:
-    "Read testimonials from clients who found healing, confidence, and transformation through Bright Hope Counselling & Coaching Centre in Chennai.",
+    "Read testimonials from clients who found healing, confidence and transformation through Bright Hope Counselling & Coaching Centre in Chennai.",
   path: "/testimonials",
 });
 
@@ -41,7 +41,7 @@ export default function TestimonialsPage() {
           </h1>
           <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Real experiences from individuals and families who found healing,
-            confidence, and growth with Bright Hope.
+            confidence and growth with Bright Hope.
           </p>
         </div>
       </section>

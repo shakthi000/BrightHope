@@ -18,7 +18,7 @@ export function ContactCTASection() {
           Ready to Begin Your Journey?
         </h2>
         <p className="mt-4 text-lg text-hope-100 max-w-2xl mx-auto leading-relaxed">
-          Take the first step towards healing, confidence, and growth. We are here
+          Take the first step towards healing, confidence and growth. We are here
           to walk alongside you every step of the way.
         </p>
 

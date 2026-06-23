@@ -5,7 +5,7 @@ import { AnimatedSection } from "@/components/animations/AnimatedSection";
 
 export const metadata: Metadata = createMetadata({
   title: "Privacy Policy",
-  description: `Privacy Policy for ${SITE.name}. Learn how we collect, use, and protect your personal information.`,
+  description: `Privacy Policy for ${SITE.name}. Learn how we collect, use and protect your personal information.`,
   path: "/privacy-policy",
   noIndex: true,
 });
@@ -31,7 +31,7 @@ export default function PrivacyPolicyPage() {
               1. Introduction
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              {SITE.name} (&ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
+              {SITE.name} (&ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose and safeguard your information when you visit our website or use our services.
             </p>
           </section>
 
@@ -46,7 +46,7 @@ export default function PrivacyPolicyPage() {
               <li>Personal identification information (name, email address, phone number)</li>
               <li>Appointment and service preferences</li>
               <li>Messages and communications you send through our contact forms</li>
-              <li>Technical data such as IP address, browser type, and device information</li>
+              <li>Technical data such as IP address, browser type and device information</li>
             </ul>
           </section>
 

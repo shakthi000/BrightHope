@@ -34,7 +34,7 @@ export default function ContactPage() {
             We Are Here to Listen
           </h1>
           <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Reach out to us for counselling, coaching, or any questions. Our team
+            Reach out to us for counselling, coaching or any questions. Our team
             will review your enquiry and get back to you.
           </p>
         </div>

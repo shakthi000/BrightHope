@@ -2,9 +2,9 @@ export const SITE = {
   name: "Bright Hope Counselling & Coaching Centre",
   shortName: "Bright Hope",
   description:
-    "Professional counselling, mentoring, and academic guidance in Chennai. Transform your life with compassionate support from A Lakshmi.",
+    "Professional counselling, mentoring and academic guidance in Chennai. Transform your life with compassionate support from A Lakshmi.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://brighthope.in",
-  email: "shakthiakshata@gmail.com",
+  email: "lakshmiananthanssv@gmail.com",
   phone: "9962261841",
   phoneFormatted: "+91 99622 61841",
   address: {
@@ -19,7 +19,7 @@ export const SITE = {
     name: "A Lakshmi",
     title: "Psychological Counsellor, Academician & Mentor",
     quote:
-      "My purpose is to make a meaningful difference in people's lives by helping them heal, grow, and discover the best version of themselves.",
+      "My purpose is to make a meaningful difference in people's lives by helping them heal, grow and discover the best version of themselves.",
     qualifications: [
       "M.Sc. (Psychology)",
       "M.Sc. (Plant Science)",
@@ -83,14 +83,14 @@ export const SERVICES = {
       id: "academic-coaching",
       title: "Academic Coaching",
       description:
-        "Personalized strategies to enhance study habits, time management, and academic performance.",
+        "Personalized strategies to enhance study habits, time management and academic performance.",
       icon: "GraduationCap",
     },
     {
       id: "student-counselling",
       title: "Student Counselling",
       description:
-        "Emotional and psychological support for students facing academic pressure, anxiety, and life transitions.",
+        "Emotional and psychological support for students facing academic pressure, anxiety and life transitions.",
       icon: "BookOpen",
     },
   ],
@@ -110,7 +110,7 @@ export const STATS = [
   { value: "10+", label: "Years of Experience" },
   { value: "500+", label: "Individuals Supported" },
   { value: "98%", label: "Client Satisfaction" },
-  { value: "100+", label: "Cancer Support Sessions" },
+  { value: "1000+", label: "Students Mentored" },
 ] as const;
 
 export const WHY_CHOOSE_US = [
@@ -135,7 +135,7 @@ export const WHY_CHOOSE_US = [
   {
     title: "Holistic Approach",
     description:
-      "Addressing emotional, academic, and personal dimensions for complete transformation.",
+      "Addressing emotional, academic and personal dimensions for complete transformation.",
     icon: "Layers",
   },
 ] as const;
@@ -159,7 +159,7 @@ export const JOURNEY_STEPS = [
   {
     step: 4,
     title: "Transform & Grow",
-    description: "Embark on your journey of healing, confidence, and lasting change.",
+    description: "Embark on your journey of healing, confidence and lasting change.",
   },
 ] as const;
 
@@ -167,7 +167,7 @@ export const TESTIMONIALS = [
   {
     id: 1,
     quote:
-      "Bright Hope helped me navigate one of the most challenging phases of my life. The counselling sessions gave me emotional clarity, confidence, and practical tools to move forward.",
+      "Bright Hope helped me navigate one of the most challenging phases of my life. The counselling sessions gave me emotional clarity, confidence and practical tools to move forward.",
     author: "Anonymous Client",
     location: "Chennai",
     rating: 5,
@@ -175,7 +175,7 @@ export const TESTIMONIALS = [
   {
     id: 2,
     quote:
-      "The guidance provided for my child brought noticeable improvements in confidence, emotional well-being, and academic performance. The support was truly life-changing.",
+      "The guidance provided for my child brought noticeable improvements in confidence, emotional well-being and academic performance. The support was truly life-changing.",
     author: "Anonymous Parent",
     location: "Chennai",
     rating: 5,
@@ -186,7 +186,7 @@ export const FAQ_ITEMS = [
   {
     question: "What can I expect in my first counselling session?",
     answer:
-      "Your first session is a welcoming conversation where we understand your concerns, establish trust, and discuss how we can support your journey. There is no pressure — just a safe space to begin.",
+      "Your first session is a welcoming conversation where we understand your concerns, establish trust and discuss how we can support your journey. There is no pressure — just a safe space to begin.",
   },
   {
     question: "Is counselling confidential?",
@@ -206,7 +206,7 @@ export const FAQ_ITEMS = [
   {
     question: "What types of issues do you help with?",
     answer:
-      "We support a wide range of concerns including emotional wellbeing, self-discovery, personal growth, relationship concerns, family concerns, academic challenges, career guidance, life transitions, stress management, confidence building, and cancer support counselling.",
+      "We support a wide range of concerns including emotional wellbeing, self-discovery, personal growth, relationship concerns, family concerns, academic challenges, career guidance, life transitions, stress management confidence building and cancer support counselling.",
   },
   {
     question: "How long is each session?",
@@ -220,7 +220,7 @@ export const BLOG_POSTS = [
     slug: "finding-hope-after-adversity",
     title: "Finding Hope After Adversity",
     excerpt:
-      "Discover how resilience can be cultivated even in life's darkest moments, and learn practical steps toward emotional recovery.",
+      "Discover how resilience can be cultivated even in life's darkest moments and learn practical steps toward emotional recovery.",
     date: "2025-03-15",
     readTime: "5 min read",
     category: "Wellness",

@@ -40,7 +40,7 @@ export default function TermsPage() {
               2. Services
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              We provide psychological counselling, mentoring, and academic coaching services. Our services are not a substitute for emergency medical or psychiatric care. If you are experiencing a mental health emergency, please contact emergency services immediately.
+              We provide psychological counselling, mentoring and academic coaching services. Our services are not a substitute for emergency medical or psychiatric care. If you are experiencing a mental health emergency, please contact emergency services immediately.
             </p>
           </section>
 
@@ -70,7 +70,7 @@ export default function TermsPage() {
               5. Intellectual Property
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              All content on this website, including text, graphics, logos, and images, is the property of {SITE.name} and is protected by applicable intellectual property laws.
+              All content on this website, including text, graphics, logos and images, is the property of {SITE.name} and is protected by applicable intellectual property laws.
             </p>
           </section>
 

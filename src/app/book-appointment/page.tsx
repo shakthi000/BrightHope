@@ -8,7 +8,7 @@ import { AppointmentForm } from "@/components/forms/AppointmentForm";
 export const metadata: Metadata = createMetadata({
   title: "Book Appointment",
   description:
-    "Book a counselling or coaching appointment with Bright Hope Counselling & Coaching Centre in Chennai. Choose your service, date, and time.",
+    "Book a counselling or coaching appointment with Bright Hope Counselling & Coaching Centre in Chennai. Choose your service, date and time.",
   path: "/book-appointment",
 });
 

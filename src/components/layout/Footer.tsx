@@ -22,7 +22,7 @@ export function Footer() {
               </div>
             </div>
             <p className="text-sm text-hope-300 leading-relaxed">
-              Transforming lives through professional counselling, mentoring, and
+              Transforming lives through professional counselling, mentoring and
               education — nurturing emotional well-being and personal empowerment.
             </p>
           </div>

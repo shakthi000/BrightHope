@@ -48,13 +48,13 @@ export function FounderSection() {
               </p>
               <p>
                 She is known for building trust and rapport effortlessly while
-                creating a safe, compassionate, and non-judgmental environment.
+                creating a safe, compassionate and non-judgmental environment.
               </p>
               <p>
                 As a cancer survivor, she transformed her own journey of resilience
-                into a mission of helping others heal, grow, and find hope. She has
+                into a mission of helping others heal, grow and find hope. She has
                 successfully supported cancer combatants, students, professionals,
-                homemakers, and individuals from diverse backgrounds.
+                homemakers and individuals from diverse backgrounds.
               </p>
               <p>
                 With more than 10 years of experience in education and student

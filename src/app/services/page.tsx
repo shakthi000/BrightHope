@@ -23,7 +23,7 @@ import { Button } from "@/components/ui/button";
 export const metadata: Metadata = createMetadata({
   title: "Our Services",
   description:
-    "Explore counselling and academic services at Bright Hope — individual counselling, cancer support, relationship counselling, academic coaching, and student counselling in Chennai.",
+    "Explore counselling and academic services at Bright Hope — individual counselling, cancer support, relationship counselling, academic coaching and student counselling in Chennai.",
   path: "/services",
 });
 
